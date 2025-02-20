@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>FFNC Web Project – Online Study Tool for Bible Students</title>
+    <meta name="title" content="FFNC Web Project – Online Study Tool for Bible Students">
+    <meta name="description" content="The FFNC Web Project transforms Bible students' books into an interactive online study tool, making learning more accessible and engaging. Explore structured chapters, study resources, and easy navigation for an enriched Bible study experience.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://foodfornewcreature.com/">
+    <meta property="og:title" content="FFNC Web Project – Online Study Tool for Bible Students">
+    <meta property="og:description" content="The FFNC Web Project transforms Bible students' books into an interactive online study tool, making learning more accessible and engaging. Explore structured chapters, study resources, and easy navigation for an enriched Bible study experience.">
+    <meta property="og:image" content="images/ffnc.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://foodfornewcreature.com/">
+    <meta property="twitter:title" content="FFNC Web Project – Online Study Tool for Bible Students">
+    <meta property="twitter:description" content="The FFNC Web Project transforms Bible students' books into an interactive online study tool, making learning more accessible and engaging. Explore structured chapters, study resources, and easy navigation for an enriched Bible study experience.">
+    <meta property="twitter:image" content="images/ffnc.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/html-5.svg">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tiny.cloud/1/b1x242bnrr16rc1ssdg09mjx0fi5bg5nnlqcpp6hn06yupc4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tox-tinymce {
+            border-radius: 1rem !important;
+            border: 2px solid #e2e8f0 !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .upload-container {
+            background: linear-gradient(145deg, #f3f4f6, #ffffff);
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .upload-container:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-area {
+            border: 2px dashed #e2e8f0;
+            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .upload-area.drag-active {
+            border-color: #667eea;
+            background: rgba(237, 242, 247, 0.8);
+        }
+        
+        @media (max-width: 640px) {
+            .tox-tinymce {
+                border-radius: 0.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
+        <!-- Header -->
+
+
+        <!-- Main Content Area -->
+        <div class="glass-effect rounded-2xl shadow-xl p-6 md:p-8">
+            <!-- File Upload Section -->
+            <div class="mb-6">
+                <div class="upload-container">
+                    <div class="upload-area rounded-lg p-4 flex items-center justify-between">
+                        <input type="file" id="fileInput" accept=".txt" class="hidden">
+                        
+                        <div class="flex items-center space-x-4">
+                            <!-- Upload Icon -->
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-2 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            
+                            <!-- Text Content -->
+                            <div class="flex-grow">
+                                <h3 class="text-base font-medium text-gray-700">Upload Text File</h3>
+                                <p class="text-sm text-gray-500">Drag & drop or click to browse</p>
+                            </div>
+                        </div>
+
+                        <!-- File Type Badge -->
+                        <span class="flex-shrink-0 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" />
+                            </svg>
+                            .txt
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editor Section -->
+            <div class="mb-8">
+                <textarea id="editor" class="w-full"></textarea>
+            </div>
+
+            <!-- Download Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="downloadAsHTML()" 
+                    class="flex items-center justify-center px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transform transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download as HTML
+                </button>
+                <button onclick="downloadAsText()" 
+                    class="flex items-center justify-center px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold transform transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download as Text
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
