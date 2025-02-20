@@ -1,4 +1,4 @@
-# FFNC Web Project - WYSIWYG Editor
+WYSIWYG Editor
 
 ![foodfornewcreature com_web_ (1)](https://github.com/user-attachments/assets/0731a854-959f-476a-bf27-c5ed170029b2)
 
