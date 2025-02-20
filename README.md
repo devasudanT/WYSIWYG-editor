@@ -1,5 +1,8 @@
 # FFNC Web Project - WYSIWYG Editor
 
+![foodfornewcreature com_web_ (1)](https://github.com/user-attachments/assets/0731a854-959f-476a-bf27-c5ed170029b2)
+
+
 A modern, feature-rich WYSIWYG (What You See Is What You Get) editor built for Bible students. This web-based tool transforms text documents into an interactive online study experience.
 
 ![HTML5](html-5.svg)
